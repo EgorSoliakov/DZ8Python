@@ -26,7 +26,7 @@ while True:
     clear()
     print_instructions()
 
-    choose(input("Введите команду (1, 2, 3 или -1): "))
+    choose(input("Введите команду (1, 2, 3, 4, 5 или -1): "))
     input ("Нажмите Enter")
 
  
