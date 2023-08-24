@@ -1,4 +1,5 @@
 from WorkDock import *
+from WorkChange import *
 import os
 clear = lambda: os.system('cls' if os.name=='nt' else 'clear')
 
@@ -16,7 +17,7 @@ def choose(choice):
     if choice == '1': return write(input('Введите ваши данные: '))  
     if choice == '2': return read_all() 
     if choice == '3': return get_by_name(input('Введите имя, фамилию или Номер телефона: '))
-    if choice == '4': return change(input('Введите имя, которое хотите изменить: '),input (' Выберите действие: \n 1 - Изменить Фамилию \n 2 - Изменить Имя \n 3 - Изменить отчество \n 4 - Изменить номер \n '))
+    if choice == '4': return change(input('Введите имя, которое хотите изменить: '),input (' Выберите действие: \n 1 - Изменить Фамилию \n 2 - Изменить Имя \n 3 - Изменить отчество \n 4 - Изменить номер \n '), input('Введите новое имя: '))
     if choice == '5': return delete(input('Введите данные, которые хотите удалить: '))
     if choice == '-1': exit()
 

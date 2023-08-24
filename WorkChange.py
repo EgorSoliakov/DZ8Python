@@ -1,0 +1,29 @@
+from Algoritm import *
+from WorkDock import *
+
+def change(name,n,new_name):
+    name = str(name)
+    new_name = str(new_name)
+    # new_name = str(input('Введите новое имя: '))
+    with open('data.txt','r',encoding = 'utf-8') as f:
+        for line in f:
+            if name in line:
+                old_data =str(line)
+                next_data = old_data.replace('\\n','').split()
+                
+                # for i in range(len(next_data)):
+                    # if next_data[i] == name:
+                    #     next_data[i] = new_name
+                if n == '1': next_data[0] = new_name
+                if n == '2': next_data[1] = new_name
+                if n == '3': next_data[2] = new_name
+                if n == '4': next_data[3] = new_name
+            # print(next_data)
+    data_string =''
+    for el in next_data:
+        data_string +=el 
+        data_string += ' '
+    print(data_string)                         
+    delete(name)  
+    write(data_string) 
+    
