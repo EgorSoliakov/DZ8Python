@@ -31,7 +31,7 @@ def delete(name):
                 f.write(line)
     return print('Данные удалены!')                           
 
-def change(name):
+def change(name,n):
     name = str(name)
     new_name = str(input('Введите новое имя: '))
     with open('data.txt','r',encoding = 'utf-8') as f:
@@ -40,17 +40,22 @@ def change(name):
                 old_data =str(line)
                 next_data = old_data.replace('\\n','').split()
                 
-                for i in range(len(next_data)):
-                    if next_data[i] == name:
-                        next_data[i] = new_name
-                        # print(next_data)
+                # for i in range(len(next_data)):
+                    # if next_data[i] == name:
+                    #     next_data[i] = new_name
+                if n == 1: next_data[0] = new_name
+                if n == 2: next_data[1] = new_name
+                if n == 3: next_data[2] = new_name
+                if n == 4: next_data[3] = new_name
+            # print(next_data)
     data_string =''
     for el in next_data:
         data_string +=el 
         data_string += ' '
     # print(data_string)                         
     delete(name)  
-    write(data_string)            
+    write(data_string) 
+          
 
 
 

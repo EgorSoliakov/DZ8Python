@@ -9,14 +9,14 @@ def print_instructions():
 # def change_data(name):
 #     clear()
 #     get_by_name(name)
-#     n = print (' Выберите действие: \n 1 - Изменить Фамилию \n 2 - Изменить Имя \n 3 - Изменить отчество \n 4 - Изменить номер \n 5 - Назад')           
+#     n = print (' Выберите действие: \n 1 - Изменить Фамилию \n 2 - Изменить Имя \n 3 - Изменить отчество \n 4 - Изменить номер ')           
 #     menu_change_data(n,name)
 
 def choose(choice):
     if choice == '1': return write(input('Введите ваши данные: '))  
     if choice == '2': return read_all() 
     if choice == '3': return get_by_name(input('Введите имя, фамилию или Номер телефона: '))
-    if choice == '4': return change(input('Введите имя, которое хотите изменить: '))
+    if choice == '4': return change(input('Введите имя, которое хотите изменить: '),input (' Выберите действие: \n 1 - Изменить Фамилию \n 2 - Изменить Имя \n 3 - Изменить отчество \n 4 - Изменить номер \n '))
     if choice == '5': return delete(input('Введите данные, которые хотите удалить: '))
     if choice == '-1': exit()
 
